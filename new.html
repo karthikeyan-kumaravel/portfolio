@@ -1,0 +1,35 @@
+<svg class="k-svg-loader" width="120" height="120" viewBox="0 0 100 100">
+  <path id="kPath"
+        d="M20 10 L20 90 M20 50 L70 10 M20 50 L70 90"
+        fill="none" stroke="#0073ff" stroke-width="10"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+<style>
+  .k-svg-loader {
+  animation: rotate 1.6s linear infinite;
+}
+
+.k-svg-loader path {
+  stroke-dasharray: 260;
+  stroke-dashoffset: 260;
+  animation: draw 1.6s ease-in-out infinite;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 260;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -260;
+  }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg);   }
+  100% { transform: rotate(360deg); }
+}
+</style>
